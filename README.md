@@ -54,8 +54,8 @@ Perpindahan antar state ditentukan oleh jarak rintangan yang dibaca sensor Laser
 
 Alur kerja sistem secara sederhana:
 
-LaserScan → FSM → /cmd_vel → Robot  
-Robot bergerak → LaserScan membaca ulang → FSM memproses ulang
+IDLE -> FORWARD -> DECIDE 
+Robot bergerak → LIDAR membaca ulang → FSM memproses ulang
 
 Proses ini berjalan secara berulang selama node ROS aktif.
 
